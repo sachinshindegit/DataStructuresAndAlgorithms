@@ -1,5 +1,10 @@
 package linkedLists;
 
+/**
+ * 
+ * @author Sachin Shinde
+ *
+ */
 public class Node {
 	String data=null;
 	Node nextNode=null;

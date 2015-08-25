@@ -1,5 +1,10 @@
 package sort;
 
+/**
+ * 
+ * @author Sachin Shinde
+ *
+ */
 // This class implements selection sort
 // Complexity: 
 // Worst, avg, best: O(n^2)
