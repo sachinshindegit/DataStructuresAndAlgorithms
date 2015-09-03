@@ -55,5 +55,16 @@ public class Node {
 		return counter;
 	}
 	
+	// To get nth element in the list
+	public String get(int index, Node head){
+		Node currentNode = head;
+		while(index > 0){
+			currentNode = currentNode.nextNode;
+			index--;
+		}
+		return currentNode.data;
+		
+	}
+	
 	
 }
