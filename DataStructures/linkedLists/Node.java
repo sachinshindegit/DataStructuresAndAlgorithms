@@ -5,6 +5,8 @@ package linkedLists;
  * @author Sachin Shinde
  *
  */
+
+// This node stores string 
 public class Node {
 	String data=null;
 	Node nextNode=null;

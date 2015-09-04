@@ -16,6 +16,7 @@ public class LinkedListMain {
 		node.appendToTail("fifth");
 		
 		System.out.println(node.length(node));
+		System.out.println(node.get(2, node));
 		
 
 	}
