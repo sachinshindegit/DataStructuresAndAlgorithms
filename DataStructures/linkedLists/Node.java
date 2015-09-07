@@ -8,11 +8,16 @@ package linkedLists;
 
 // This node stores string 
 public class Node {
-	String data=null;
-	Node nextNode=null;
+	public String data=null;
+	public Node nextNode=null;
 	
 	public Node(String data){
 		this.data = data;
+	}
+	
+	public Node(String data, Node n){
+		this.data = data;
+		this.nextNode = n;
 	}
 	
 	
