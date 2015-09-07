@@ -1,4 +1,4 @@
-package stacks;
+package stacksAndQueue;
 
 /**
  * 
@@ -8,7 +8,7 @@ package stacks;
 
 // This is implementation of stack using array
 public class ArrayStack {
-	private static final int DEFAULT_CAPACITY = 15;
+	private static final int DEFAULT_CAPACITY = 3;
 	private Object[] array;
 	private int top;
 	
@@ -26,6 +26,15 @@ public class ArrayStack {
 		this(DEFAULT_CAPACITY);
 	}
 	
+	
+	// To get a peek at the value at the top of the stack
+	public Object peek(){
+		if(top >= 0){
+			return array[top];
+		}
+		return null;
+		
+	}
 	// To check if the stack is empty
 	public boolean isEmpty(){
 		if(top < 0){
@@ -52,11 +61,12 @@ public class ArrayStack {
 	
 	// to push a new element in the stack
 	public void push(Object obj){
-		top++;
-		if(top == array.length){
+		
+		if(top >= array.length-1){
 			System.out.println("Stack if full");
 		}
 		else{
+			top = top+1;
 			array[top] = obj;
 		}
 	}
@@ -66,6 +76,16 @@ public class ArrayStack {
 		while(top >= 0){
 			array[top] = null;
 			top--;
+		}
+	}
+	
+	// To check if the stack is full
+	public boolean isFull(){
+		if(top == array.length-1){
+			return true;
+		}
+		else{
+			return false;
 		}
 	}
 }
