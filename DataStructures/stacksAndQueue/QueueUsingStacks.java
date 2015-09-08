@@ -1,5 +1,12 @@
 package stacksAndQueue;
 
+/**
+ * 
+ * @author Sachin Shinde
+ *
+ */
+
+// This class implements queue using stacks.Here I have used two stacks to implement this
 public class QueueUsingStacks {
 	
 	private ListStack inputStack;
