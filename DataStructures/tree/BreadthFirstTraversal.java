@@ -43,6 +43,8 @@ public class BreadthFirstTraversal {
 		
 		BreadthFirstTraversal b = new BreadthFirstTraversal();
 		b.traverse(bst.getRoot());
+		System.out.println();
+		System.out.println("height: "+bst.getHeight(bst.getRoot()));
 		
 		
 	}

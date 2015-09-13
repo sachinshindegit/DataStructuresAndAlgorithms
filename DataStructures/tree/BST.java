@@ -83,4 +83,47 @@ public class BST {
 		}
 		return currentNode;
 	}
+	
+	//To get height of a tree
+	
+	public int getHeight(TreeNode root){
+		if(root == null){
+			return 0;
+		}
+		return Math.max(getHeight(root.getLeft()), getHeight(root.getRight()))+1;
+	}
+	
+	// To check height to check if the tree is balanced
+	public int checkHeightForBalance(TreeNode root){
+		if(root==null){
+			return 0;
+		}
+		
+		int leftHeight =  checkHeightForBalance(root.getLeft());
+		if(leftHeight == -1){
+			return -1;
+		}
+		
+		int rightHeight = checkHeightForBalance(root.getRight());
+		if(rightHeight == -1){
+			return -1;
+		}
+		
+		int heightDiff = leftHeight - rightHeight;
+		if(Math.abs(heightDiff) > 1){
+			return -1;
+		}
+		else{
+			return Math.max(leftHeight, rightHeight)+1;
+		}
+	}
+	
+	public boolean isTreeBalanced(TreeNode root){
+		if(checkHeightForBalance(root)==-1){
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
 }
