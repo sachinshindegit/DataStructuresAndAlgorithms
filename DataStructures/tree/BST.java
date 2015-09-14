@@ -118,6 +118,7 @@ public class BST {
 		}
 	}
 	
+	// To check if the binary tree is balanced
 	public boolean isTreeBalanced(TreeNode root){
 		if(checkHeightForBalance(root)==-1){
 			return false;
@@ -125,5 +126,24 @@ public class BST {
 		else{
 			return true;
 		}
+	}
+	
+	
+	// To check if the given binary tree is a BST
+	public boolean isBinarySearchTree(TreeNode node, int min, int max){
+		if(node==null){
+			return true;
+		}
+		
+		if(node.getData() < min || node.getData() > max){
+			return false;
+		}
+		
+		if(!isBinarySearchTree(node.getLeft(), min, node.getData()) ||
+				!isBinarySearchTree(node.getRight(), node.getData(), max)
+				){
+			return false;
+		}
+		return true;
 	}
 }
