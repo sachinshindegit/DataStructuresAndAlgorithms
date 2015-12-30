@@ -34,7 +34,7 @@ public class BubbleSort {
 		BubbleSort bubbleSort = new BubbleSort();
 		arr = bubbleSort.sort(arr);
 		for(int i=0;i<arr.length;i++){
-			System.out.print(arr[i]+" ");
+			System.out.print(arr[i]+"  ");
 		}
 		System.out.println();
 		System.out.println("comparisons Count: "+bubbleSort.count);
